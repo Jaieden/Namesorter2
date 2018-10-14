@@ -13,7 +13,7 @@ namespace Namesorter2
             FileData outputFile = new FileData("sorted-names-list.txt");
             string[] names = inputFile.FileContents;
             SorterGetter sortOrderGetter = new SorterGetter();
-            Array.Sort(names, sortOrderGetter.Resolve("args[1]"));
+            Array.Sort(names, sortOrderGetter.Resolve(args[1]));
             Console.WriteLine(string.Join("\n",names));
             outputFile.FileContents = names;
         }
